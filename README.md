@@ -1,4 +1,4 @@
-# CIS 18.10.87.2 Ensure 'Turn on PowerShell Transcription' is set to 'Enabled'
+# Ensure 'Turn on PowerShell Transcription' is set to 'Enabled'
 
 This Policy setting lets you capture the input and output of Windows PowerShell commands into text-based transcripts.
 The recommended state for this setting is: Enabled.
@@ -21,7 +21,7 @@ To establish the recommended configuration via GP, set the following UI path to 
 Note: This Group Policy path may not exist by default. It is provided by the Group Policy template PowerShellExecutionPolicy.admx/adml that is included with the Microsoft Windows 10 RTM (Release 1507) Administrative Templates (or newer).
 
 - Default Value: `Disabled`. (Transcription of PowerShell-based applications is disabled by default, although transcription can still be enabled through the Start-Transcript cmdlet.)
-- Reference: `800-171|3.3.1`, `800-171|3.3.2`, `800-53|AU-2`, `800-53r5|AU-2`, `CN-L3|8.1.4.3(a)`, `CSCv7|8.8`, `CSCv8|8.8`, `CSF|PR.PT-1`, `GDPR|32.1.b`, `HIPAA|164.306(a)(1)`, `HIPAA|164.312(b)`, `ITSG-33|AU-2`, `LEVEL|1A`, `NESA|M1.2.2`, `NESA|M5.5.1`, `NIAv2|AM7`, `NIAv2|AM11a`, `NIAv2|AM11b`, `NIAv2|AM11c`, `NIAv2|AM11d`, `NIAv2|AM11e`, `NIAv2|SS30`, `NIAv2|VL8`, `QCSC-v1|8.2.1`, `QCSC-v1|13.2`, `SWIFT-CSCv1|6.4`
+- Reference: `CIS 18.10.87.2`, `800-171|3.3.1`, `800-171|3.3.2`, `800-53|AU-2`, `800-53r5|AU-2`, `CN-L3|8.1.4.3(a)`, `CSCv7|8.8`, `CSCv8|8.8`, `CSF|PR.PT-1`, `GDPR|32.1.b`, `HIPAA|164.306(a)(1)`, `HIPAA|164.312(b)`, `ITSG-33|AU-2`, `LEVEL|1A`, `NESA|M1.2.2`, `NESA|M5.5.1`, `NIAv2|AM7`, `NIAv2|AM11a`, `NIAv2|AM11b`, `NIAv2|AM11c`, `NIAv2|AM11d`, `NIAv2|AM11e`, `NIAv2|SS30`, `NIAv2|VL8`, `QCSC-v1|8.2.1`, `QCSC-v1|13.2`, `SWIFT-CSCv1|6.4`
 - Policy Value: `1`
 - Actual Value: `NULL`
 
