@@ -1,5 +1,3 @@
-
-
 function Assert-LogDirPermissions([IO.DirectoryInfo] $LogDir, [System.Security.AccessControl.FileSystemAccessRule[]] $DesiredACLs) {
     if (-not $LogDir.Exists) {
         return $false
@@ -167,12 +165,12 @@ $permission = @{
 Enable-PowerShellCoreTranscription -LogDir $permission.LogDir
 Enable-PowerShellTranscription -LogDir $permission.LogDir
 
-Write-Verbose ('Asserting LogDir Perms: {0}' -f (Assert-LogDirPermissions @permission | ConvertTo-Json))
-if (-not (Assert-LogDirPermissions @permission)) {
+$asserted = Assert-LogDirPermissions @permission
+Write-Verbose ('Asserting LogDir Perms: {0}' -f $asserted)
+if (-not $asserted) {
     Write-Verbose ('Setting LogDir Perms: {0}' -f ($permission | ConvertTo-Json))
     Set-LogDirPermissions @permission
 }
-Write-Verbose ('Asserting LogDir Perms: {0}' -f (Assert-LogDirPermissions @permission | ConvertTo-Json))
 
 Remove-OldFiles -LogDir $permission.LogDir -Age 60
 Remove-EmptyFolders -LogDir $permission.LogDir
